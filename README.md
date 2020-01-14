@@ -16,11 +16,3 @@ Requirements:
 - Use plain PHP (no frameworks).
 
 Fork your own copy of eglobal-it/f4u-test-assignment and share the result with us.
-
-##Installation
-
-
-```bash
-chmod +x index.php
-./index.php
-```
