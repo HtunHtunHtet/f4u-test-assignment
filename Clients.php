@@ -8,7 +8,7 @@
 			$this->mysqli = $this->connect();
 		}
 		
-		public function getAllClients()
+		public function getAllClients(): array
 		{
 			$sql     = "SELECT * FROM client";
 			$result  = $this->connect()->query($sql);
@@ -25,7 +25,7 @@
 			}
 		}
 		
-		public function addClient( $firstName , $lastName)
+		public function addClient(string $firstName ,string $lastName) :int
 		{
 			try {
 				$stmt   = $this->mysqli->prepare("INSERT INTO client(firstname,lastname) VALUES (?,?)" );
@@ -37,7 +37,8 @@
 			}
 		}
 		
-		public function findById ($id) {
+		public function findById (int $id): int
+		{
 			$sql     = "SELECT * FROM client WHERE id=".$id;
 			$result  = $this->connect()->query($sql);
 			$numRows = $result->num_rows;
@@ -51,7 +52,7 @@
 			}
 		}
 		
-		public function updateClient ($firstName, $lastName, $clientId)
+		public function updateClient ($firstName, $lastName, $clientId) :int
 		{
 			$stmt   = $this->mysqli->prepare("UPDATE client SET firstname=?, lastname=? WHERE id=?");
 			$stmt   ->bind_param('sss', $firstName, $lastName, $clientId);

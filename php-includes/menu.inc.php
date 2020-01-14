@@ -24,7 +24,7 @@
 		    break;
 		    
 		 case 3:
-		 	$userId = promptInput('Enter User Id: ');
+		 	$userId = promptInput('Which user id would you like to update: ');
 		 	$findResult = $clients->findById($userId);
 		 	
 		 	if($findResult > 0) {
