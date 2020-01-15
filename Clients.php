@@ -10,7 +10,11 @@
 		
 		public function getAllClients(): array
 		{
-			$sql     = "SELECT * FROM client";
+			$sql     = "Select c.*, a.*
+						From client c
+						LEFT JOIN address a
+						ON c.id = a.client_id;
+						";
 			$result  = $this->connect()->query($sql);
 			$numRows = $result->num_rows;
 			
@@ -30,8 +34,8 @@
 			try {
 				$stmt   = $this->mysqli->prepare("INSERT INTO client(firstname,lastname) VALUES (?,?)" );
 				$stmt   ->bind_param('ss', $firstName,$lastName);
-				$result = $stmt ->execute();
-				return $result;
+				$stmt   ->execute();
+				return $stmt->insert_id;
 			}catch(Exception $e) {
 				echo "Message: ". $e->getMessage();
 			}
