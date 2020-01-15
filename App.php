@@ -5,8 +5,10 @@
     include 'php-includes/intro.inc.php';
     include 'php-includes/menu.inc.php';
     
-    $input =intro();
-    mainMenuControl($input);
+    while(true){
+	    $input =intro();
+	    mainMenuControl($input);
+    }
     
     
     
