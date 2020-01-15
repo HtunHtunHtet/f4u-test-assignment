@@ -9,5 +9,6 @@
 	 echo "3) Update Client\n";
 	
 	 $handle = fopen ("php://stdin","r");
-	 return fgets($handle);
+	 $input = trim(fgets($handle));
+	 return $input;
  }

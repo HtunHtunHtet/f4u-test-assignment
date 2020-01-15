@@ -2,7 +2,7 @@
 
 function promptInput($text) {
 	echo $text;
-	$handle = fopen ("php://stdin","r+");
-	return fgets($handle);
+	$handle = fopen ("php://stdin","r");
+	return trim(fgets($handle));
 	
 }
