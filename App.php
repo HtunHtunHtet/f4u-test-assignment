@@ -6,7 +6,9 @@
     include 'php-includes/menu.inc.php';
     
     $input =intro();
-    print mainMenuControl($input);
+    mainMenuControl($input);
+    
+    
     
 	
 	

@@ -16,3 +16,16 @@ Requirements:
 - Use plain PHP (no frameworks).
 
 Fork your own copy of eglobal-it/f4u-test-assignment and share the result with us.
+
+
+##INSTALLATION
+
+- Clone Repo
+- perform ```composer install``` to install vendors
+- run `php App.php` 
+
+##TEST RUN COMMAND
+
+```./vendor/bin/phpunit --bootstrap vendor/autoload.php UnitTestFiles/Test/AddressTest.php```
+
+```./vendor/bin/phpunit --bootstrap vendor/autoload.php UnitTestFiles/Test/ClientsTest.php```

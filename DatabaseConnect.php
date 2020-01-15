@@ -1,5 +1,6 @@
 <?php
 	
+	
 	class DatabaseConnect {
 		
 		private $servername;
@@ -7,8 +8,8 @@
 		private $password;
 		private $dbname;
 		
-		protected function connect(){
-			$this->servername = "localhost";
+		public function connect(){
+			$this->servername = "127.0.0.1:8889";
 			$this->username   = "root";
 			$this->password   = "root";
 			$this->dbname     = "php_assignment";

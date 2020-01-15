@@ -1,5 +1,6 @@
 <?php
 	
+	
 	class Clients extends DatabaseConnect{
 		
 		private $mysqli;
@@ -18,14 +19,13 @@
 			$result  = $this->connect()->query($sql);
 			$numRows = $result->num_rows;
 			
-			//if numRows > 0, there is data
 			if($numRows > 0) {
 				while ($row = $result -> fetch_assoc()){
 					$data[] = $row;
 				}
 				return $data;
 			}else{
-				print "There is no client, please add one or more clients";
+				print "There is no client, please add one or more clients\n";
 			}
 		}
 		
@@ -49,10 +49,10 @@
 			
 			//if numRows > 0, there is data
 			if($numRows > 0) {
-				return $numRows;
+				return true;
 			}else{
 				print "Didn't found client, please add one or more client\n";
-				exit;
+				return false;
 			}
 		}
 		
