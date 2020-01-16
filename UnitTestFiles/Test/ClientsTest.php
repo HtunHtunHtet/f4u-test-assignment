@@ -34,7 +34,8 @@
 		
 		public function testUpdateClient ()
 		{
-			$client_id = 90;
+			//look into database and try to change the client_id
+			$client_id = 1;
 			$firstName = 'firstName test';
 			$lastName  = 'lastName test';
 			
