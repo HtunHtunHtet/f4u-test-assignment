@@ -2,7 +2,7 @@
 
 - Clone Repo
 - perform ```composer install``` to install vendors
-- run dbdump.sql
+- execute dbdump.sql at phpmyadmin or mysql client
 - Configure Database @ DatabaseConnect.php
 - run `php App.php` 
 

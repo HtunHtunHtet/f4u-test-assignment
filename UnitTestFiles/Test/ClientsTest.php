@@ -25,7 +25,7 @@
 		
 		public function testFindById()
 		{
-			//look into database and try to change the client_id
+			//look into database and try to change the client_id , client_id 40 will generate failure when run test
 			$client_id = 40;
 			
 			$clients = new Clients();
